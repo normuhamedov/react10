@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 export default function LoginForm() {
     const [formData, setFormData] = useState({ username: "", password: "" });
@@ -70,7 +70,7 @@ export default function LoginForm() {
 
             <div className="mt-4 text-center bg-[#000] border border-gray-700 p-4 rounded-lg w-[350px]">
                 <p className="text-white">
-                    Don't have an account? <span className="text-blue-500 cursor-pointer">Sign up</span>
+                    Don't have an account? <span className="text-blue-500 cursor-pointer"><NavLink to='/register'>Sign up</NavLink></span>
                 </p>
             </div>
         </div>
